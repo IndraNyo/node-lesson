@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <p>
+        USER：
+        <input id="user" type="text" value="">
+    </p>
+    <p>
+        PASSWORD:
+        <input id="pass" type="password" value="">
+    </p>
+    <button id="btnReg">registe</button>
+    <button id="btnLogin">Login</button>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        function reg() {
+            $.ajax({
+                url: '/user',
+                type: 'GET',
+                data: {
+                    act: 'reg',
+                    user: $('#user').val(),
+                    pass: $('#pass').val()
+                }
+            }).done(function (data) {
+                let json = eval('(' + data + ')');
+
+                if (json.ok) {
+                    alert(json.msg);
+                } else {
+                    alert('注册失败' + json.msg);
+                }
+
+            }).fail(function () {
+                console.log('error');
+            })
+        }
+
+        function login() {
+            $.ajax({
+                url: '/user',
+                type: 'GET',
+                data: {
+                    act: 'login',
+                    user: $('#user').val(),
+                    pass: $('#pass').val()
+                }
+            }).done(function (data) {
+
+                let json = eval('(' + data + ')');
+
+                if (json.ok) {
+                    alert(json.msg);
+                } else {
+                    alert('登录失败' + json.msg);
+                }
+
+            }).fail(function () {
+                console.log('error');
+            })
+        }
+
+        $(function () {
+            $('#btnReg').on('click', function () {
+                reg();
+            })
+            $('#btnLogin').on('click', function () {
+                login();
+            })
+        })
+    </script>
+</body>
+
+</html>
