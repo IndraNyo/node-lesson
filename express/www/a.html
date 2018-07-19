@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <p>
+        USER：
+        <input id="user" type="text" value="">
+    </p>
+    <p>
+        PASSWORD:
+        <input id="pass" type="password" value="">
+    </p>
+    <button id="btnLogin">Login</button>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        function login() {
+            $.ajax({
+                url: '/login',
+                type: 'GET',
+                data: {
+                    user: $('#user').val(),
+                    pass: $('#pass').val()
+                }
+            }).done(function (data) {
+                // expres返回的data对象可以直接使用
+                if (data.ok) {
+                    alert(data.msg);
+                } else {
+                    alert('登录失败' + data.msg);
+                }
+            }).fail(function () {
+                console.log('error');
+            })
+        }
+
+        $(function () {
+            $('#btnLogin').on('click', function () {
+                login();
+            })
+        })
+    </script>
+</body>
+
+</html>
