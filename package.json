@@ -1,0 +1,23 @@
+{
+  "name": "node-lesson",
+  "version": "0.0.4",
+  "description": "A NodeJS project",
+  "author": "IndraNyo <frx99indra@sina.com>",
+  "private": true,
+  "scripts": {},
+  "devDependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-static": "^1.2.5"
+  },
+  "engines": {
+    "node": ">= 4.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "dependencies": {}
+}
