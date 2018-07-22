@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div>
+        <% 
+            let str = "<div>123123123</div>"
+        %>
+        <!--转义输出和非转义输出-->
+        <%= str %>
+        <%- str %>
+        <!--载入文件-->
+        <% include a.txt %>
+        <!--循环输出载入文件-->
+        <% for(let i=0; i<5; i++) {%>
+                <% include a.txt %>
+        <% } %>
+    </div>
+</body>
+</html>

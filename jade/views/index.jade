@@ -1,0 +1,17 @@
+doctype
+html
+    head
+        meta(charset="utf-8")
+        title jade 测试页面
+        style.
+            p{ width: 100px; height:100px; background:#069; color: #fff; text-align: center; line-height: 100px; float: left; margin: 10px;}
+            p.last { background-color: #f90 }
+    body
+        div
+            -var a=0; //前面有- 后面一直是代码就不用-了
+            while a<12
+                if a%4==0 && a!=0
+                    p.last=a++
+                else
+                    p=a++
+        footer
