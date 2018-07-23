@@ -1,0 +1,57 @@
+
+@font-face {font-family: "indrafont";
+  src: url('../fonts/iconfont.eot?t=1502378448867'); /* IE9*/
+  src: url('../fonts/iconfont.eot?t=1502378448867#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/iconfont.woff?t=1502378448867') format('woff'), /* chrome, firefox */
+  url('../fonts/iconfont.ttf?t=1502378448867') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../fonts/iconfont.svg?t=1502378448867#indrafont') format('svg'); /* iOS 4.1- */
+}
+
+/* Component
+============================================================================= */
+[class*="idr-"] {
+  font-family:"indrafont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+  /*font-weight: normal; // 2
+  font-style: normal; // 2k
+  vertical-align: baseline; // 3
+  line-height: 1; // 4*/
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.idr-border {
+  padding: .2em .25em .15em;
+  border: solid 0.08em #eeeeee;
+  border-radius: .1em;
+}
+
+.idr-users:before { content: "\e602"; }
+.idr-clock:before { content: "\e600"; }
+.idr-user:before { content: "\e654"; }
+.idr-edit:before { content: "\e638"; }
+.idr-signal:before { content: "\e639"; }
+.idr-socialinstagram:before { content: "\e879"; }
+.idr-twitter:before { content: "\e601"; }
+.idr-fork:before { content: "\e6d8"; }
+.idr-search:before { content: "\e613"; }
+.idr-arrow-down:before { content: "\e66f"; }
+.idr-email:before { content: "\e644"; }
+.idr-lock:before { content: "\e65c"; }
+.idr-facebookicon:before { content: "\e66e"; }
+.idr-del:before { content: "\e63a"; }
+.idr-menu:before { content: "\e668"; }
+.idr-arr-r:before { content: "\e65a"; }
+.idr-plus:before { content: "\e603"; }
+.idr-ybbcook:before { content: "\e635"; }
+.idr-collection:before { content: "\e60a"; }
+.idr-shoppingBag:before { content: "\e6a0"; }
+.idr-filedone:before { content: "\e7b4"; }

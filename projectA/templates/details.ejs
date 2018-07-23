@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Main</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+
+<body>
+    <div id="User">
+        <div class="user-avatar-wrap">
+            <div class="user-avatar">
+                <img src="<%= article_data.author_src %>">
+            </div>
+            <a class="btn-blu-txt"><%= article_data.author %></a>
+        </div>
+        <div class="contet-list">
+            <p class="title"><%= article_data.title %></p>
+            <p class="sub-title"><%= article_data.sub_title %></p>
+            <p>
+                <span class="post-time"><%= article_data.post_time %></span>
+                <span class="like"><%= article_data.like %>个赞</span>
+            </p>
+            <p class="content">13123123</p>
+        </div>
+    </div>
+</body>
+
+</html>

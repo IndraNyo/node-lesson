@@ -1,0 +1,352 @@
+@import "./reset.scss";
+@import "./global.scss";
+@import "../css/iconfont.css";
+
+.login-wrap{
+    border: 1px solid $border;
+    @include borderR(5px);
+    @include pm(0,vw(68) vw(30) vw(30) vw(30)) ;
+    hr{
+        background-color:$s-border;
+    }
+    .input-wrap{
+        i{
+            display: inline-block;
+            border: none;
+            height: vw(90);
+            line-height: vw(90);
+            text-align: center;
+            width: vw(74);
+            font-size: vw(42);
+            color: $gray;
+        }
+        .input-user{
+            float:right;
+            height: vw(40);
+            line-height: vw(40);
+            width: vw(610);
+            font-size: vw(32);
+            border: none;
+            color: $white;
+            background-color: $mainColor;
+            @include pm(0 vw(10) 0 0,vw(24) 0 0 0);
+            @include placeholder($gray);
+        }
+        .input-password{
+            @extend .input-user;
+        }
+    }
+    
+}
+.login-btn-wrap{
+    @include pm(0,0 vw(30) vw(50) vw(30));
+    .btn-login{
+        @include btn(100%,vw(88));
+        @include borderR(5px);
+        background-color: $primaryColor;
+        color: $white;
+        font-size: vw(28);
+    }
+}
+.register-wrap{
+    @include pm(0,0 vw(30) vw(30) vw(30));
+    p{
+        text-align: center;
+        color: $secondaryTxt;
+        font-size: vw(28);
+        @include pm(0,0 0 vw(5) 0);
+        .btn-register{
+            color: $white;
+        }
+    }
+}
+@svg 1px-border{
+    height:2px;
+    @rect{
+        fill:var(--color,black);
+        width:100%;
+    }
+}
+.ex-hr{
+    border: 1px solid #414050;
+    border-image: svg(1px-border param(--color #00b1ff)) 1 1 stretch;
+}
+
+
+// reg
+.sign-up-wrap{
+    @include pm(0,vw(68) vw(30) vw(30) vw(30));
+    .btn-sign-up{
+        @include btn(100%,vw(88));
+        @include borderR(5px);
+        background-color: $primaryColor;
+        color: $white;
+        font-size: vw(28);
+        letter-spacing: vw(-1);
+    }
+}
+.facebook-wrap{
+    @extend .sign-up-wrap;
+    @include pm(0,0 vw(30) vw(50) vw(30));
+    .btn-facebook{
+        @extend .btn-sign-up;
+        background-color: $facbook;
+    }
+
+}
+.register-wrap{
+    @include pm(0,0 vw(30) vw(30) vw(30));
+    p{
+        text-align: center;
+        color: $secondaryTxt;
+        font-size: vw(28);
+        @include pm(0,0 0 vw(5) 0);
+        .btn-register{
+            color: $white;
+        }
+    }
+}
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.45s ease-out;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+.logo-bg{
+    &.shape-ht{
+        height: vw(495);
+        transition: height 0.35s;
+    }
+    &.origin-ht{
+        height: vw(690);
+        transition: height 0.35s;
+    }
+}
+
+// REG 
+
+.reg-title{
+    text-align: center;
+    font-size: vw(42);
+    color: $white;
+    @include pm(0,0 0 vw(40) 0);
+}
+.login-wrap{
+    border: 1px solid $border;
+    @include borderR(5px);
+    @include pm(0,0 vw(30) vw(30) vw(30));
+    hr{
+        background-color:$s-border;
+    }
+    .input-wrap{
+        i{
+            display: inline-block;
+            border: none;
+            height: vw(90);
+            line-height: vw(90);
+            text-align: center;
+            width: vw(74);
+            font-size: vw(42);
+            color: $gray;
+        }
+        .input-user{
+            float:right;
+            height: vw(40);
+            line-height: vw(40);
+            width: vw(610);
+            font-size: vw(32);
+            border: none;
+            color: $white;
+            background-color: $mainColor;
+            @include pm(0 vw(10) 0 0,vw(24) 0 0 0);
+            @include placeholder($gray);
+        }
+        .input-password{
+            @extend .input-user;
+        }
+    }
+}
+.create-btn-wrap{
+    @include pm(0,0 vw(30) vw(30) vw(30));
+    .btn-create{
+        @include btn(100%,vw(88));
+        @include borderR(5px);
+        background-color: $primaryColor;
+        color: $white;
+        font-size: vw(28);
+    }
+}
+
+
+// list
+.main-banner{
+    height: vw(486);
+    background: url('../img/main-bg.jpg') no-repeat 0 0;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    z-index: 100;
+    .main-bg-masker{
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        height: vw(486);
+        background: url('../img/main-bg-mask.png') no-repeat 0 0;
+        z-index: 200;
+    }
+    h1{
+        color: $white;
+        text-align: center;
+        font-size: vw(50);
+        font-family: 'Arial Narrow', sans-serif;
+        position: relative;
+        z-index:300;
+        @include pm(0,vw(320) 0 0 0);
+    }
+    span{
+        display: block;
+        width: 100%;
+        color: $off-white;
+        text-align: center;
+        position: relative;
+        z-index: 300;
+        @include pm(0,vw(24) 0 0 0);
+    }
+}
+
+.prd-list-wrap{
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    background: $white;
+    @include pm(vw(20),0);
+    .prd-list-box{
+        align-items: flex-start;
+        width: vw(750);
+        height: vw(280);
+        position: relative;
+        z-index: 100;
+        overflow: hidden;
+        @include borderR(vw(10));
+        @include pm(0,0 0 vw(10) 0);
+        h6{
+            position: relative;
+            color: $mainTxt;
+            text-align: left;
+            height: vw(120);
+            line-height: 160%;
+            font-size: vw(36);
+            font-family: 'Arial Narrow', 'Microsoft YaHei';
+            z-index: 300;
+            @include pm(0 vw(10),vw(20) 0 vw(10) 0);
+        }
+        span{
+            display: block;
+            position: relative;
+            color: $primaryTxt;
+            text-align: left;
+            line-height: 140%;
+            font-size: vw(30);
+            z-index: 300;
+            @include pm(0 vw(10),0);
+        }
+    }
+}
+
+// details
+.user-header{
+    position: relative;
+    height: vw(90);
+    overflow: hidden;
+    background-color: $mainColor;
+    .btn-cancel{
+        position: absolute;
+        display: block;
+        height: vw(90);
+        line-height: vw(90);
+        width: vw(160);
+        left: 0;
+        top: 0;
+        font-size: vw(30);
+        color: $secondaryTxt;
+        text-align: center;
+        @include pm(0,0 vw(30));
+    }
+    .title-wrap{
+        display: block;
+        height: vw(90);
+        line-height: vw(90);
+        width: vw(300);
+        text-align: center;
+        color: $white;
+        @include pm(0,0 auto)
+    }
+    .btn-done{
+        @extend .btn-cancel;
+        left: auto;
+        right: 0;
+    }
+}
+.user-avatar-wrap{
+    height: vw(300);
+    background-color: $grey;
+    overflow: hidden;
+    .user-avatar{
+        height: vw(210);
+        width: vw(210);
+        overflow: hidden;
+        border: vw(2) solid $border-g;
+        @include borderR(vw(100));
+        @include pm(0,vw(30) auto 0 auto);
+        img{
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+    .btn-blu-txt{
+        @include btn(vw(180),vw(30));
+        font-size: vw(28);
+        font-weight: 600;
+        overflow: hidden;
+        color: $primaryColor;
+        @include pm(0,vw(10) auto 0 auto);
+    }
+}
+.contet-list{
+    background-color: $white;
+    @include pm(vw(15),0);
+    P{
+        @include pm;
+        margin-bottom: vw(20);
+        &.title{
+            font-size: vw(50);
+            color: $primaryColor;
+        }
+        &.sub-title{
+            font-size: vw(36);
+            color: $primaryTxt;
+        }
+        &.content{
+            font-size: vw(30);
+            color: $mainTxt;
+        }
+        span{
+            &.post-time{
+                font-size: vw(26);
+                color: $secondaryTxt;
+                margin-right: vw(50);
+            }
+            &.like{
+                font-size: vw(26);
+                color: $primaryCur;
+            }
+        }
+    }
+}

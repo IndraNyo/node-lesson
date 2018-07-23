@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+    <div id="Register">
+        <div class="logo-bg">
+            <div class="logo"></div>
+        </div>
+        <div v-bind:class="[regShow?'shape-ht':'origin-ht','logo-bg']">
+            <div class="logo"></div>
+        </div>
+        <div id="UserRegister">
+            <p class="reg-title">SIGN UP</p>
+            <div class="login-wrap">
+                <div class="ex-hr"></div>
+                <div class="input-wrap">
+                    <i class="idr-user"></i>
+                    <input id="UserName" class="input-user" type="text" placeholder="Username">
+                </div>
+                <div class="ex-hr"></div>
+                <div class="input-wrap">
+                    <i class="idr-lock"></i>
+                    <input id="InputPwd" class="input-password" type="password" placeholder="Password">
+                </div>
+                <div class="ex-hr"></div>
+                <div class="input-wrap">
+                    <i class="idr-lock"></i>
+                    <input id="InputPwdConfm" class="input-password" type="password" placeholder="Confirm password">
+                </div>
+            </div>
+            <div class="create-btn-wrap">
+                <a href="#" id="btnCreate" class="btn-create">CREATE ACCOUNT</a>
+            </div>
+        </div>
+
+        <div v-show="!regShow" class="register-wrap">
+            <p>Already have account?</p>
+            <p>Please
+                <a href="./login.html" class="btn-register">Sing in</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

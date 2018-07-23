@@ -20,7 +20,7 @@ const db = mySql.createConnection({
 
 // INSERT INTO `user_table` (`ID`, `user_name`, `pass_word`) VALUES (0, 'Mute', '444444');
 // SELECT * FROM user_table;
-db.query('SELECT * FROM user_table', function (err, data) {
+db.query(`SELECT * FROM user_table`, function (err, data) {
     if(err) {
         console.log(err)
     }else{

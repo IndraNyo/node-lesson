@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Main</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
+</head>
+
+<body>
+    <div id="Main">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+
+                <% for ( let i=0; i<banners.length; i++){%>
+
+                <div class="swiper-slide">
+                    <div class="main-banner" style="background-img: url('<%= banners[i].src %>')">
+                        <div class="main-bg-masker"></div>
+                        <h1><%= banners[i].title %></h1>
+                        <span><%= banners[i].sub_title %></span>
+                    </div>
+                </div>
+
+                <% } %>
+
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <ul class="prd-list-wrap">
+
+            <% for ( let i=0; i<articles.length; i++){%>
+
+            <li class="prd-list-box">
+                <a href="/article?id=<%= articles[i].ID%>">
+                    <h6><%= articles[i].title %></h6>
+                    <span><%= articles[i].description %></span>
+                </a>
+            </li>
+            
+            <% } %>
+        </ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    </script>
+</body>
+
+</html>

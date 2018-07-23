@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Main</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
+</head>
+
+<body>
+    <div id="Main">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="main-banner">
+                        <div class="main-bg-masker"></div>
+                        <h1>HAPPY B-DAY COLLECTION</h1>
+                        <span>A collection of recipes for the week ending</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="main-banner">
+                        <div class="main-bg-masker"></div>
+                        <h1>HAPPY B-DAY COLLECTION</h1>
+                        <span>A collection of recipes for the week ending</span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="main-banner">
+                        <div class="main-bg-masker"></div>
+                        <h1>HAPPY B-DAY COLLECTION</h1>
+                        <span>A collection of recipes for the week ending</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <ul class="prd-list-wrap">
+            <li class="prd-list-box">
+                <div class="img-wrap">
+                    <img src="./img/demo1.jpg">
+                </div>
+                <div class="prd-list-masker"></div>
+                <h6>COOKIE RECIPES TO SATISFY YOUR SWEET TOOTH</h6>
+                <span>A collection of recipes for the week ending</span>
+            </li>
+            <li class="prd-list-box">
+                <div class="img-wrap">
+                    <img src="./img/demo2.jpg">
+                </div>
+                <div class="prd-list-masker"></div>
+                <h6>GHEERY WINTER SALADS FOR DREARY DAYS</h6>
+                <span>A collection of recipes for the week ending</span>
+            </li>
+            <li class="prd-list-box">
+                <div class="img-wrap">
+                    <img src="./img/demo3.jpg">
+                </div>
+                <div class="prd-list-masker"></div>
+                <h6>COOKIE RECIPES TO SATISFY YOUR SWEET TOOTH</h6>
+                <span>A collection of recipes for the week ending</span>
+            </li>
+        </ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    </script>
+</body>
+
+</html>
